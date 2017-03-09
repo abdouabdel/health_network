@@ -97,8 +97,8 @@
 									{{--
 										<i class="material-icons icons-inline">{{ $access_icon }}</i>
 									--}}
-									<span class="badge {{ $access_class }}">
-										{{$access_level}}
+									<span class="badge">
+
 									</span>
 								</a>
 							</td>

@@ -64,7 +64,7 @@
 						<span itemprop="image" style="display:none;">{{ Gravatar::get($user->email) }}</span>
 					</div>
 
-					<div class="mdl-card__title" @if ($user->profile->user_profile_bg != NULL) style="background: url('{{$user->profile->user_profile_bg}}') center/cover;" @endif>
+					<div class="mdl-card__title" >
 
 						<div class="file_upload_container">
 						    <div class="file_upload_btn">
@@ -136,19 +136,19 @@
 								  	</div>
 								  	<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 									    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('twitter_username') ? 'is-invalid' :'' }}">
-									        {!! Form::text('twitter_username', $user->profile->twitter_username, array('id' => 'twitter_username', 'class' => 'mdl-textfield__input')) !!}
+									        {!! Form::text('twitter_username', $user->twitter_username, array('id' => 'twitter_username', 'class' => 'mdl-textfield__input')) !!}
 									        {!! Form::label('twitter_username', Lang::get('profile.label-twitter_username') , array('class' => 'mdl-textfield__label')); !!}
 									    </div>
 								  	</div>
 								  	<div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
 									    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('github_username') ? 'is-invalid' :'' }}">
-									        {!! Form::text('github_username', $user->profile->github_username, array('id' => 'github_username', 'class' => 'mdl-textfield__input')) !!}
+									        {!! Form::text('github_username', $user->github_username, array('id' => 'github_username', 'class' => 'mdl-textfield__input')) !!}
 									        {!! Form::label('github_username', Lang::get('profile.label-github_username') , array('class' => 'mdl-textfield__label')); !!}
 									    </div>
 								  	</div>
 									<div class="mdl-cell mdl-cell--12-col">
 									    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('bio') ? 'is-invalid' :'' }}">
-									        {!! Form::textarea('bio',  $user->profile->bio, array('id' => 'bio', 'class' => 'mdl-textfield__input')) !!}
+									        {!! Form::textarea('bio',  $user->bio, array('id' => 'bio', 'class' => 'mdl-textfield__input')) !!}
 									        {!! Form::label('bio', Lang::get('profile.label-bio') , array('class' => 'mdl-textfield__label')); !!}
 									    </div>
 									</div>
@@ -162,12 +162,12 @@
 									<div class="mdl-cell mdl-cell--12-col">
 
 										<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label margin-bottom-1 {{ $errors->has('location') ? 'is-invalid' :'' }}">
-										    {!! Form::text('location', $user->profile->location, array('id' => 'location', 'class' => 'mdl-textfield__input' )) !!}
+										    {!! Form::text('location', $user->location, array('id' => 'location', 'class' => 'mdl-textfield__input' )) !!}
 										    {!! Form::label('location', Lang::get('profile.label-location') , array('class' => 'mdl-textfield__label')); !!}
 											<span class="mdl-textfield__error">Please Enter a Valid Location</span>
 
 										</div>
-										@if ($user->profile->location)
+										@if ($user->location)
 											<div class="card-image mdl-card mdl-shadow--2dp">
 												<div id="map-canvas"></div>
 												<div class="mdl-card__actions mdl-color--primary mdl-color-text--white">
