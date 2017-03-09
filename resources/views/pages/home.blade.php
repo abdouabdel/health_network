@@ -37,7 +37,7 @@
 	<div class="mdl-grid margin-top-0-important padding-top-0-important">
 
 		<div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell margin-top-0-important mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--8-col-desktop">
-		  	<div class="mdl-card__title mdl-card--expand @if (Auth::user()->profile->user_profile_bg == NULL) mdl-color--teal-300 @endif" @if (Auth::user()->profile->user_profile_bg != NULL) style="background: #263238 url('{{Auth::user()->profile->user_profile_bg}}') center/cover;" @endif>
+		  	<div class="mdl-card__title mdl-card--expand  mdl-color--teal-300 " >
 				<div class="mdl-user-avatar">
 					<img src="{{ Gravatar::get(Auth::user()->email) }}" alt="{{ Auth::user()->name }}">
 					<span itemprop="image" style="display:none;">{{ Gravatar::get(Auth::user()->email) }}</span>

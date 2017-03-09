@@ -5,7 +5,7 @@
 				<img src="{{ Gravatar::get($user->email) }}" alt="{{ $user->name }}">
 				<span itemprop="image" style="display:none;">{{ Gravatar::get($user->email) }}</span>
 			</div>
-			<div class="mdl-card__title" @if ($user->profile->user_profile_bg != NULL) style="background: url('{{$user->profile->user_profile_bg}}') center/cover;" @endif>
+			<div class="mdl-card__title" @if ($user->user_profile_bg != NULL) style="background: url('{{$user>user_profile_bg}}') center/cover;" @endif>
 		        <h3 class="mdl-card__title-text mdl-title-username">
 		        	{{ $user->name }}
 		        </h3>

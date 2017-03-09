@@ -1,22 +1,6 @@
 <script type="text/javascript">
 
-    $(document).ready(function() {
-      loadWeather('{{ Auth::user()->profile->location }}',''); //@params location, woeid
-    });
 
-    function loadWeather(location, woeid) {
-      $.simpleWeather({
-        location: location,
-        woeid: woeid,
-        unit: 'f',
-        success: function(weather) {
-          show_weather(weather);
-        },
-        error: function(error) {
-          $('#weather').html('<p>'+error+'</p>');
-        }
-      });
-    }
 
     // WEATHER HTML OUTPUT WITH ANIMATED BG
     function show_weather(weather) {
@@ -141,9 +125,7 @@
           loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
         });
       });
-      $('.js-user-location').on('click', function() {
-          loadWeather('{{ Auth::user()->profile->location }}','');
-      });
+
     }
 
 </script>

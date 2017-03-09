@@ -44,12 +44,8 @@
         </h2>
     </div>
     <div class="mdl-card__supporting-text margin-top-0 padding-top-0 mdl-color-text--white">
-        @if (Auth::user()->profile->location)
-            <div id="weather"></div>
-            <div id="forecast"></div>
-        @else
+
             No Location Set
-        @endif
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white show-forecast">
